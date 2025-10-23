@@ -3,10 +3,10 @@ def Partition(array:List , low , high):
     i = low
     j = high
     pivot = array[low]
-    while i < j:
-        while array[i] <= pivot:
+    while True:
+        while i <= j and array[i] <= pivot:
             i += 1
-        while array[j] > pivot:
+        while i <= j and array[j] > pivot:
             j -= 1
         if i < j:
             array[i] , array[j] = array[j] , array[i]
@@ -23,4 +23,5 @@ def QuickSort(array:List , low , high):
     return array
 
 array = [10 , 15 , 1 , 2 , 9 , 16 , 11]
+array = [i for i in range(9 , -1 , -1)]
 print(QuickSort(array , 0 , len(array) - 1))
