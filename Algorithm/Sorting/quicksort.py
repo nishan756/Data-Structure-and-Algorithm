@@ -10,7 +10,7 @@ def Partition(array:List , low , high):
             j -= 1
         if i < j:
             array[i] , array[j] = array[j] , array[i]
-    
+            
     array[low] , array[j] = array[j] , array[low]
     return j
 
